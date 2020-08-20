@@ -6,18 +6,41 @@ budget_data = os.path.join("Pybank", "Resources", "budget_data.csv")
 with open(budget_data) as csvfile:
     csv_reader = csv.reader(csvfile, delimiter=",")
 
+    #Skipping header for further calculations
+    csv_header= next(csv_reader)
 
     print("Financial Analysis")
     print("----------------------------")
     #Counting the months
-    #print(sum["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"])
+    months = []
+    profit = []
+    difference = []
+    #Part of Method 2
+    #total_months = 0
+    for row in csv_reader:
+        months.append(str(row[0]))
+        profit.append(int(row[1]))
 
-    #Total profit/loss
-    #for row in csv.reader:
-    #print(sum[])
+        
+        #Method #2
+        #total_months = total_months + 1
+        #total_months += 1 
+    
+    total_months = len(months)
+    print(total_months)
+    print(sum(profit))
+    
+
+    
+    for i in range(len(profit)-1):
+        difference.append(profit[i+1] - profit[i])
+
+    average_difference = (sum(difference)/len(profit))
+    print(average_difference)
+
 
     #Average profit/loss
-    #print
+    #print(average)
 
     #Greatest increase in profits
     #for row in csvreader:

@@ -10,7 +10,7 @@ with open(election_data) as csvfile:
     print("Election Results")
     print("-------------------------")
     #Total votes cast
-    #print(sum (total row - 1))
+    #print(sum)
 
 
     print("-------------------------")
