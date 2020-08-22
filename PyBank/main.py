@@ -11,42 +11,38 @@ with open(budget_data) as csvfile:
 
     print("Financial Analysis")
     print("----------------------------")
-    #Counting the months
+    #Creating lists for months, profit, and difference
     months = []
     profit = []
     difference = []
-    #Part of Method 2
-    #total_months = 0
+
+    #Appending months and profit
     for row in csv_reader:
         months.append(str(row[0]))
         profit.append(int(row[1]))
-
-        
-        #Method #2
-        #total_months = total_months + 1
-        #total_months += 1 
     
+    #Calculating total months
     total_months = len(months)
+
+    #Printing total months and sum of profit
     print("Total Months:",total_months)
     print("Total:","$",sum(profit))
     
 
-    
+    #Creating loop to find differences between months in profit
     for i in range(len(profit)-1):
         difference.append(profit[i+1] - profit[i])
 
+    #Calculating and printing average difference in profit between months
     average_difference = (sum(difference)/len(profit))
     print("Average Change","$",average_difference)
 
-    #maximum_increase = (max(increase)/len(profit))
-    #print(maximum_difference)
+    
+    #Declaring and printing the greatest increase and decrease in profits
+    maximum_difference = (max(difference))
+    print("Greatest Increase in Profits:",maximum_difference)
 
-    #Greatest increase in profits
-    #for row in csvreader:
-    #if
-    #print(Greatest Increase in Profits:)
+    minimum_difference = (min(difference))
+    print("Greatest Decrease in Profits:",minimum_difference)
 
-    #Greatest decrease in profits
-    #for row in csvreader:
-    #if
-    #print(Greatest Decrease in Profits:)
+    
