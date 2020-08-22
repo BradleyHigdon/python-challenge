@@ -27,8 +27,8 @@ with open(budget_data) as csvfile:
         #total_months += 1 
     
     total_months = len(months)
-    print(total_months)
-    print(sum(profit))
+    print("Total Months:",total_months)
+    print("Total:","$",sum(profit))
     
 
     
@@ -36,7 +36,10 @@ with open(budget_data) as csvfile:
         difference.append(profit[i+1] - profit[i])
 
     average_difference = (sum(difference)/len(profit))
-    print(average_difference)
+    print("Average Change","$",average_difference)
+
+    #maximum_increase = (max(increase)/len(profit))
+    #print(maximum_difference)
 
     #Greatest increase in profits
     #for row in csvreader:
