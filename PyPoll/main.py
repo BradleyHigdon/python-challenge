@@ -25,12 +25,14 @@ with open(election_data) as csvfile:
 
     #Total votes cast
     total_votes = len(voterID)
-    print ("Total Votes:",total_votes)
+    print("Total Votes:",total_votes)
 
 
     print("-------------------------")
     #Candidates that recieved votes
-
+    candidate_set = set(candidate)
+    number_of_unique_values = len(candidate_set)
+    print(candidate_set)
 
     #Total votes for each candidate
     #print
