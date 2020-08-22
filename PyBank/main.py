@@ -38,10 +38,6 @@ with open(budget_data) as csvfile:
     average_difference = (sum(difference)/len(profit))
     print(average_difference)
 
-
-    #Average profit/loss
-    #print(average)
-
     #Greatest increase in profits
     #for row in csvreader:
     #if
