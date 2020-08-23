@@ -1,0 +1,11 @@
+Election Results
+-------------------------
+Total Votes: 3521001
+-------------------------
+Candidates who received votes {"O'Tooley", 'Correy', 'Li', 'Khan'}
+Khan vote total: 0.0% 0
+Khan vote total: 0.0% 0
+Khan vote total: 0.0% 0
+Khan vote total: 2.840101437062926e-05% 1
+-------------------------
+Winner: O'Tooley

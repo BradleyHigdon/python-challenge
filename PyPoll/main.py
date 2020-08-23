@@ -66,6 +66,22 @@ with open(election_data) as csvfile:
     if ((Li_votes > Correy_votes),(Li_votes > Khan_votes), (Li_votes > OTooley_votes)): winner = "Li"
     if ((OTooley_votes > Correy_votes),(OTooley_votes > Li_votes), (OTooley_votes > Khan_votes)): winner = "O'Tooley"
 
-    print(winner)
+    print("Winner:",winner)
 
     print("-------------------------")
+
+    #Writing up analysis file
+    PollAnalysis = open("PollAnalysis.txt","w+")
+    PollAnalysis.write("Election Results")
+    PollAnalysis.write('\n' + "-------------------------")
+    PollAnalysis.write('\n' + "Total Votes: " + str(total_votes))
+    PollAnalysis.write('\n' + "-------------------------")
+    PollAnalysis.write('\n' + "Candidates who received votes " + str(candidate_set))
+    PollAnalysis.write('\n' + "Khan vote total: " + str(Khan_votes_percentage) + "% " + str(Khan_votes))
+    PollAnalysis.write('\n' + "Khan vote total: " + str(Correy_votes_percentage) + "% " + str(Correy_votes))
+    PollAnalysis.write('\n' + "Khan vote total: " + str(Li_votes_percentage) + "% " + str(Li_votes))
+    PollAnalysis.write('\n' + "Khan vote total: " + str(OTooley_votes_percentage) + "% " + str(OTooley_votes))
+    PollAnalysis.write('\n' + "-------------------------")
+    PollAnalysis.write('\n' + "Winner: " + str(winner))
+
+    PollAnalysis.close
