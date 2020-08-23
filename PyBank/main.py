@@ -40,9 +40,18 @@ with open(budget_data) as csvfile:
     
     #Declaring and printing the greatest increase and decrease in profits
     maximum_difference = (max(difference))
-    print("Greatest Increase in Profits:",maximum_difference)
+    print("Greatest Increase in Profits:","$",maximum_difference)
 
     minimum_difference = (min(difference))
-    print("Greatest Decrease in Profits:",minimum_difference)
-
+    print("Greatest Decrease in Profits:","$",minimum_difference)
     
+    BudgetAnalysis = open("BudgetAnalysis.txt","w+")
+    BudgetAnalysis.write("Financial Analysis")
+    BudgetAnalysis.write('\n' + "----------------------------")    
+    BudgetAnalysis.write('\n' + "Total Months: " + str(total_months))
+    BudgetAnalysis.write('\n' + "Total: " + "$" + str(sum(profit)))
+    BudgetAnalysis.write('\n' + "Average Change " + "$" + str(average_difference))
+    BudgetAnalysis.write('\n' + "Greatest Increase in Profits: " + "$" + str(maximum_difference))
+    BudgetAnalysis.write('\n' + "Greatest Decrease in Profits: " + "$" + str(minimum_difference))
+
+    BudgetAnalysis.close
