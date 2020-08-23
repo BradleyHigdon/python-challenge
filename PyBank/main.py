@@ -45,6 +45,7 @@ with open(budget_data) as csvfile:
     minimum_difference = (min(difference))
     print("Greatest Decrease in Profits:","$",minimum_difference)
     
+    #Writing up analysis file
     BudgetAnalysis = open("BudgetAnalysis.txt","w+")
     BudgetAnalysis.write("Financial Analysis")
     BudgetAnalysis.write('\n' + "----------------------------")    
